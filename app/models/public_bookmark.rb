@@ -1,0 +1,2 @@
+class PublicBookmark < ApplicationRecord
+end

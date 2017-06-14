@@ -1,0 +1,37 @@
+<%= form_with(model: public_bookmark, local: true) do |form| %>
+  <% if public_bookmark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(public_bookmark.errors.count, "error") %> prohibited this public_bookmark from being saved:</h2>
+
+      <ul>
+      <% public_bookmark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :public_bookmark_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :public_bookmark_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :public_bookmark_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submitter_email %>
+    <%= form.text_field :submitter_email, id: :public_bookmark_submitter_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

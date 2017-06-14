@@ -1,0 +1,6 @@
+<h1>Editing Public Bookmark</h1>
+
+<%= render 'form', public_bookmark: @public_bookmark %>
+
+<%= link_to 'Show', @public_bookmark %> |
+<%= link_to 'Back', public_bookmarks_path %>
